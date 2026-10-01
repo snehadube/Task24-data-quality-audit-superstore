@@ -1,0 +1,13 @@
+Check_ID,Check,Dataset,Count,Status,Interpretation
+DQ-01,Missing values,Sales_Facts,0,PASS,No blank cells found in the fact table.
+DQ-02,Exact duplicate rows,Sales_Facts,0,PASS,No fully duplicated records found.
+DQ-03,Duplicate Row IDs,Sales_Facts,0,PASS,Row ID is unique.
+DQ-04,Invalid ship dates,Sales_Facts,2185,FAIL,Ship Date is earlier than Order Date; do not invent replacement dates.
+DQ-05,Invalid quantity,Sales_Facts,0,PASS,All quantities are positive.
+DQ-06,Invalid discount,Sales_Facts,0,PASS,All discounts are between 0 and 1.
+DQ-07,Negative sales,Sales_Facts,0,PASS,No negative sales values found.
+DQ-08,Duplicate Product IDs,Product_Dimension,32,FAIL,32 product IDs occur more than once; verify the source master before using Product ID as a unique key.
+DQ-09,Missing customer keys,Sales_Facts → Customer_Dimension,0,PASS,All fact Customer IDs exist in the customer dimension.
+DQ-10,Missing product keys,Sales_Facts → Product_Dimension,0,PASS,All fact Product IDs have a matching dimension key.
+DQ-11,Missing location keys,Sales_Facts → Location_Dimension,0,PASS,All fact location combinations exist in the location dimension.
+DQ-12,Missing Date Dimension dates,Sales_Facts → Date_Dimension,0,PASS,All distinct Order Dates are represented in the date dimension.

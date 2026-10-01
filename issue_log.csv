@@ -1,0 +1,3 @@
+Issue_ID,Issue,Dataset,Count,Severity,Action
+DQ-04,Ship Date earlier than Order Date,Sales_Facts,2185,High,Set invalid Ship Date to blank in cleaned sample; verify original source before final correction.
+DQ-08,Duplicate Product IDs in Product Dimension,Product_Dimension,32,High,Quarantine duplicate Product IDs and verify the product master/source mapping.
